@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="264" viewBox="0 0 960 264">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#263853"/>
+    </pattern>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+      <path d="M0 0L6 3L0 6Z" fill="#70e7ce"/>
+    </marker>
+  </defs>
+  <rect width="960" height="264" rx="24" fill="#101a2d"/>
+  <rect x="1" y="1" width="958" height="262" rx="23" fill="url(#grid)" stroke="#304564"/>
+  <g fill="none" stroke="#70e7ce" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M265 154H353"/>
+    <path d="M591 154H633Q655 154 655 132V112Q655 100 667 100H688"/>
+    <path d="M591 154H633Q655 154 655 176V196Q655 208 667 208H688"/>
+  </g>
+  <g fill="#192941" stroke="#3e567a">
+    <rect x="32" y="112" width="224" height="84" rx="12"/>
+    <rect x="368" y="112" width="214" height="84" rx="12"/>
+    <rect x="704" y="58" width="224" height="84" rx="12"/>
+    <rect x="704" y="166" width="224" height="84" rx="12"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="32" y="45" fill="#70e7ce" font-size="22" font-weight="700">01  /  ПУТЬ ДАННЫХ</text>
+    <g fill="#f4f7ff" font-size="23" font-weight="700">
+      <text x="48" y="147">Источник</text><text x="384" y="147">Сайт</text>
+      <text x="720" y="93">GA4</text><text x="720" y="201">Google Таблицы</text>
+    </g>
+    <g fill="#b8c8e3" font-size="16">
+      <text x="48" y="173">Канал и UTM-метки</text><text x="384" y="173">Визит и действия</text>
+      <text x="720" y="119">События и отчёты</text><text x="720" y="227">Заявки из формы</text>
+    </g>
+  </g>
+</svg>
