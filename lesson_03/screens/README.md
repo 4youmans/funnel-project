@@ -13,3 +13,15 @@
 На кадрах должны быть видны адрес своего сайта и свой Measurement ID.
 
 Этот файл удалять не нужно.
+
+## Кадры из своего проекта
+
+Источник — [4youmans/ga4-analytics-lab](https://github.com/4youmans/ga4-analytics-lab).
+
+![Веб-поток GA4 для учебного сайта.](ga4-stream.png)
+
+*Веб-поток GA4 для учебного сайта.*
+
+![События учебного сайта в DebugView.](ga4-debugview.png)
+
+*События учебного сайта в DebugView.*

@@ -13,3 +13,11 @@
 Measurement ID не замазывать: по нему проверяется, что ресурс ваш.
 
 Этот файл удалять не нужно.
+
+## Кадры из своего проекта
+
+Источник — [4youmans/ga4-analytics-lab](https://github.com/4youmans/ga4-analytics-lab).
+
+![Веб-поток учебного сайта и его Measurement ID.](ga4-stream.png)
+
+*Веб-поток учебного сайта и его Measurement ID.*

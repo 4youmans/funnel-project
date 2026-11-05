@@ -18,3 +18,27 @@
 переписку замажьте.
 
 Этот файл удалять не нужно.
+
+## Кадры из своего проекта
+
+Источник — [4youmans/ga4-analytics-lab](https://github.com/4youmans/ga4-analytics-lab).
+
+![Профессиональный аккаунт Instagram для задания.](instagram-creator-ready.png)
+
+*Профессиональный аккаунт Instagram для задания.*
+
+![Опубликованная запись в Instagram.](instagram-post-published.png)
+
+*Опубликованная запись в Instagram.*
+
+![Подключение Instagram в ManyChat.](manychat-connected.png)
+
+*Подключение Instagram в ManyChat.*
+
+![Опубликованный сценарий в ManyChat.](manychat-live.png)
+
+*Опубликованный сценарий в ManyChat.*
+
+![Предпросмотр сценария ManyChat.](manychat-preview.png)
+
+*Предпросмотр сценария ManyChat.*

@@ -16,6 +16,8 @@
 
 ## Домашние работы
 
+Скриншоты из учебного сайта [ga4-analytics-lab](https://github.com/4youmans/ga4-analytics-lab) собраны в папках заданий: [ДЗ 2](lesson_02/screens/README.md), [ДЗ 3](lesson_03/screens/README.md), [ДЗ 4](lesson_04/screens/README.md), [ДЗ 5](lesson_05/screens/README.md), [ДЗ 6](lesson_06/screens/README.md), [ДЗ 7](lesson_07/screens/README.md).
+
 | Работа | Что вы сделаете | Бланк |
 |:--|:--|:--|
 | [01 · Путь пользователя](lesson_01/README.md) | Выделите три события и найдёте точку потери данных. | [Заполнить](lesson_01/homework_01.md) |
