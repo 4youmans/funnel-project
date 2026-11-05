@@ -1,77 +1,43 @@
 # Домашняя работа № 5 · Контролируемая таблица заявок
 
-**Дисциплина:** ОП.03 «Информационные технологии»
+ОП.03 «Информационные технологии»
 
-| Поле | Значение |
-|---|---|
-| Фамилия, имя, отчество | Сдобников Андрей Андреевич |
-| Группа | РПО-2 |
-| Номер работы | 5 |
-| Тема работы | Форма сайта → Apps Script → Google Таблица заявок |
-| Дата сдачи | 22.10.2026 |
+Автор: Паюсов Семён Игоревич
 
----
+Группа: РПО 2\25
 
-## 1. Таблица
+Дата проверки: 21.10.2026
 
-Я создал таблицу «GA4 Analytics Lab — Leads» с листом `leads`. В первой
-строке девять заголовков: `request_id`, `created_at`, `name`, `email`,
-`direction`, `utm_source`, `utm_medium`, `utm_campaign`, `status`. Строка
-заголовков закреплена, у статуса список из четырёх значений: `new`,
-`in_progress`, `done`, `rejected`. Два правила подсвечивают неполную строку
-и повторный `request_id`.
+## Таблица и форма
 
-Ссылка на таблицу (доступ открыт только преподавателю): https://docs.google.com/spreadsheets/d/1_f6i-YYxj85VFAusZiMvujYfG9Bsi56ysXP2laU-YxU/edit
+Таблица: https://docs.google.com/spreadsheets/d/1VQ40uqpRfwoTX9QAmHVJKt_UVi6M051qoNm8NOQfdMs/edit
 
-## 2. Приёмник и форма
+Лист leads содержит request_id, created_at, name, email, direction, utm_source, utm_medium, utm_campaign, status. Строка заголовков закреплена. Настроены четыре допустимых статуса new / in_progress / done / rejected, отклонение неверного значения, подсветка повторных ID и пропущенных обязательных полей.
 
-Я вставил `Code.gs` из материалов в Apps Script, указал ID своей таблицы
-и опубликовал проект как Web app. Форму в `contacts.html` заменил
-фрагментом из материалов, в `action` поставил адрес своего Web app,
-обработчик формы в `js/script.js` заменил новым.
+![Заявки в собственной таблице](screens/leads.png)
 
-| Мои данные | Значение |
-|---|---|
-| Публичный адрес сайта | https://ga4-analytics-lab-two.vercel.app/ |
-| Measurement ID (`G-…`) | `G-0DJ198TV26` |
-| Коммит с новой формой (первые 7 символов) | [`ebf27ca`](https://github.com/dothefuture/ga4-analytics-lab/commit/ebf27ca) — Connect contact form to Apps Script |
+*Заявки в собственной таблице.*
 
-Развёртывание Apps Script: «Приём заявок с сайта GA4 Analytics Lab»,
-версия 1 от 30.09.2026, тип Web app. Для кадра 4 разметка формы разбита
-на строки коммитом [`6abfcb9`](https://github.com/dothefuture/ga4-analytics-lab/commit/6abfcb9),
-поведение формы не менялось.
+Использован существующий опубликованный Apps Script Web App; добавлена функция setupLeadsSheet. Код: [Code.gs](https://github.com/4youmans/ga4-analytics-lab/blob/84263bc3cc3f699864c7420977c507890ee27a64/apps-script/Code.gs). Адрес приёмника стоит в action [contacts.html](https://github.com/4youmans/ga4-analytics-lab/blob/84263bc3cc3f699864c7420977c507890ee27a64/contacts.html), UTM и request_id — скрытые поля. Сайт: https://ga4-analytics-lab-six.vercel.app; Measurement ID: G-0L7H66CE9D; коммит формы b70113f.
 
-## 3. Две тестовые заявки
+![Форма на опубликованном сайте](screens/production-form.png)
 
-Первую заявку я отправил со страницы без меток: в таблице записалось
-`direct` / `none` / `not_set` и статус `new`. Вторую отправил по ссылке
-с метками `telegram` / `social` / `lesson07`, и они записались в свои
-столбцы.
+*Форма на опубликованном сайте.*
 
-| | Заявка без меток | Заявка с метками |
+## Подтверждённые заявки
+
+| request_id | Источник / канал / кампания | Условия |
 |---|---|---|
-| `request_id` | `REQ-C7096A88-B5D8-4624-A729-EC462107A165` | `REQ-9BCC2FF5-CD17-41B3-A36B-8D22F8D8F8BD` |
+| REQ-5AFA429D-D226-41AF-9876-B58C4001E58D | direct / none / not_set | Локальная проверка 20.10 |
+| REQ-C11AC31E-38C6-41D7-943E-A982409AA797 | instagram / social / backend_guide | Локальная проверка 20.10 |
+| REQ-BF301F0D-0DD9-4E8F-9CCE-D734437452F4 | telegram / social / lesson07 | Production-проверка 21.10, 12:08:32 |
 
-Ссылка для второй заявки:
-`https://ga4-analytics-lab-two.vercel.app/contacts.html?utm_source=telegram&utm_medium=social&utm_campaign=lesson07`
+Production-путь: guide.html с метками → contacts.html → POST → новая строка leads со статусом new. Использованы тестовые данные student@example.com.
 
-## 4. Событие в аналитике
+## Проверки и ограничения
 
-После отправки в GA4 пришло событие `generate_lead`. Оно показывает
-попытку отправки формы, а сама заявка подтверждается строкой в таблице.
-В Realtime: `generate_lead` — 2, в карточке ключевых событий тоже 2.
+Пустая обязательная форма не отправилась. Повторная отправка второго ID не создала строку. Дату и status=new задаёт сервер. Блокировка охватывает проверку request_id и запись.
 
-## 5. Проверки
+generate_lead обозначает попытку отправки. Скрытый iframe не подтверждает запись; успешное сохранение проверяется по request_id в таблице. Поэтому количество событий может превышать число уникальных заявок.
 
-Форма с пустыми полями не отправилась: браузер остановил отправку,
-а в GA4 пришло `form_error`. Копия строки с тем же `request_id`
-подсветилась, после кадра я её удалил. Статус `closed` таблица
-не приняла, а через список статус тестовой заявки сменился
-`new` → `in_progress` → `done`.
-
----
-
-Не получилось (если всё работает, оставьте пустым):
-
-ИИ: использовал для помощи со снятием кадров и оформлением бланка; данные
-в бланке сверены с таблицей и GA4.
+Отдельные кадры временного дубля, отказа статуса finished и последовательности смены статуса ещё не сняты. Это не выдаётся за выполненную ручную проверку.
