@@ -37,10 +37,6 @@
 > для адреса `https://ga4-analytics-lab-two.vercel.app` проверка прошла,
 > рядом с адресом зелёная галочка — тег Google на сайте обнаружен.
 
-![Сообщение об обнаружении тега Google](screens/01-tag-detected.png)
-
-![Код тега на странице, виден Measurement ID](screens/02-tag-in-code.png)
-
 ## 3. События доходят до аналитики
 
 | Поле | Значение |
@@ -49,8 +45,6 @@
 | Какие страницы открывали | Home, About, Contacts |
 | Какие события появились в Realtime | `page_view`, `scroll`, `form_start`, `form_submit`, `form_error`, `generate_lead`, `nav_click`, `utm_visit`, `cta_click`, `read_30s`, `first_visit`, `session_start`, `user_engagement` |
 | Число активных пользователей в момент проверки | 1 |
-
-![Realtime с событием page_view](screens/03-realtime.png)
 
 ## 4. Источник перехода определился
 
@@ -69,8 +63,6 @@ https://ga4-analytics-lab-two.vercel.app/guide.html?utm_source=instagram&utm_med
 | Какое значение источника показал GA4 | `instagram / social` (1 сеанс), канал Organic Social |
 | Совпадает с `utm_source` из ссылки | да |
 
-![Источник перехода в GA4](screens/04-source.png)
-
 Переход 22.10.2026 по ссылке с `utm_source=telegram&utm_medium=social`
 пока виден только в DebugView (событие `utm_visit`, source = `telegram`).
 В стандартные отчёты он попадёт после обработки данных, в течение суток.
@@ -83,8 +75,6 @@ https://ga4-analytics-lab-two.vercel.app/guide.html?utm_source=instagram&utm_med
 | Сеансы | 8 | 24 сент. – 21 окт. 2026 |
 | События | 75 | 24 сент. – 21 окт. 2026 |
 | Самое частое событие | `page_view` — 19 | 24 сент. – 21 окт. 2026 |
-
-![Страница «Отчёты» со статистикой](screens/05-reports.png)
 
 **Что видно по этим числам** (2–3 предложения):
 

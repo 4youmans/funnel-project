@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300">
-<defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#263853" stroke-width="1"/></pattern></defs>
-<rect width="960" height="300" rx="24" fill="#101a2d"/><rect x="1" y="1" width="958" height="298" rx="23" fill="url(#grid)" stroke="#304564"/>
-<g font-family="Segoe UI, Arial, sans-serif"><path d="M603 1v298" stroke="#304564"/><text x="52" y="68" fill="#70e7ce" font-size="18" font-weight="700">ОП.03   /   ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ</text><text x="48" y="151" fill="#f4f7ff" font-size="72" font-weight="750">funnel-project</text><text x="52" y="203" fill="#b8c8e3" font-size="26" font-weight="500">Практикум по цифровой аналитике</text><text x="52" y="254" fill="#70e7ce" font-size="18" font-weight="700">07  /  ДОМАШНИХ РАБОТ  +  КУРСОВАЯ</text>
-<path d="M641 61H921L893 109H669Z" fill="#729bff"/><path d="M676 121H886L858 169H704Z" fill="#59c5ed"/><path d="M712 181H850L822 229H740Z" fill="#70e7ce"/><circle cx="781" cy="260" r="9" fill="#ffd078"/></g></svg>
